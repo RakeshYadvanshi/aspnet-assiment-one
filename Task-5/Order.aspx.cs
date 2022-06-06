@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-// make sure to include these namespaces
+// make sure to include this namespace
 using System.Data;
-using System.Web.Caching;
 
-namespace Ch08Cart
+namespace Ch09Cart
 {
     public partial class Order : System.Web.UI.Page
     {
@@ -16,42 +15,14 @@ namespace Ch08Cart
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // bind drop-down list and update page hit count on first load  
-            if (!IsPostBack)
-            {
-                ddlProducts.DataBind();
-
-                Application.Lock();
-                    int hitCount = Convert.ToInt32(Application["HitCount"]);
-                    hitCount++;
-                    Application["HitCount"] = hitCount.ToString();
-                Application.UnLock();
-
-                lblPageHits.Text = hitCount.ToString();
-            }
-            // get and show product data on every load  
+            //bind dropdown on first load; get and show product data on every load   
+            if (!IsPostBack) ddlProducts.DataBind();
             selectedProduct = this.GetSelectedProduct();
             lblName.Text = selectedProduct.Name;
-            lblShortDescription.Text = selectedProduct.ShortDescription; 
+            lblShortDescription.Text = selectedProduct.ShortDescription;
             lblLongDescription.Text = selectedProduct.LongDescription;
             lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c") + " each";
             imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
-
-            // get firstname cookie and set welcome message if it exists
-            HttpCookie firstName = Request.Cookies["FirstName"];
-            if (firstName != null)
-                lblWelcome.Text = "<h4>welcome back, " + firstName.Value + "!</h4>";
-
-            // get timestamp from cache, then display it
-            // or set timestamp in cache to now plus 10, then display
-            object cacheTimestamp = Cache.Get("Timestamp");
-            if (cacheTimestamp == null)
-            {
-                cacheTimestamp = DateTime.Now;
-                Cache.Insert("Timestamp", cacheTimestamp, null, 
-                    DateTime.Now.AddMinutes(10), Cache.NoSlidingExpiration);
-            }
-            lblCacheTimestamp.Text = cacheTimestamp.ToString();
         }
 
         private Product GetSelectedProduct()

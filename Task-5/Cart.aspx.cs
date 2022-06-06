@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Ch08Cart
+namespace Ch09Cart
 {
     public partial class Cart : System.Web.UI.Page
     {
@@ -13,8 +13,11 @@ namespace Ch08Cart
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.HeaderText = "Your Shopping Cart";
+
             cart = CartItemList.GetCart();
-            if (!IsPostBack) DisplayCart();
+            if (!IsPostBack)
+                this.DisplayCart();
         }
 
         private void DisplayCart()
@@ -35,7 +38,7 @@ namespace Ch08Cart
                 if (lstCart.SelectedIndex > -1)
                 {
                     cart.RemoveAt(lstCart.SelectedIndex);
-                    DisplayCart();
+                    this.DisplayCart();
                 }
                 else
                 {
@@ -55,7 +58,7 @@ namespace Ch08Cart
 
         protected void btnCheckOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/CheckOut.aspx");
+            lblMessage.Text = "Sorry, that function hasn't been implemented yet.";
         }
     }
 }

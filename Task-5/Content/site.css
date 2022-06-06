@@ -11,6 +11,11 @@
     margin-top: 1em;
 }
 
+.nav > li > a {
+    color: #8c8c8c;
+    font-weight: 600;
+}
+
 .btn { 
     margin-bottom: 1em;
 }
@@ -19,11 +24,16 @@ label {
     font-weight: normal;
 }
 
-/*** elements ***/
+/*** Elements ***/
 footer {
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
 }
+
 /*** server controls ***/
+#lblDaysUntilHalloween {
+    color: #8c8c8c;
+    font-weight: 600;
+}
 #lblUnitPrice {
     font-weight: bold;
 }
