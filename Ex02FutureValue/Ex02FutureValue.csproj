@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="Images\ameer-basheer-2r5adxul49E-unsplash.jpg" />
+    <Content Include="Images\MurachLogo.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

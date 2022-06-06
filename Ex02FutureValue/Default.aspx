@@ -5,23 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Chapter 2: Future Value</title>
-   
+
     <style type="text/css">
         .auto-style1 {
             width: 541px;
         }
+
         .auto-style2 {
             width: 256px;
         }
     </style>
-   
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Image Width="200" ImageUrl="~/Images/ameer-basheer-2r5adxul49E-unsplash.jpg" AlternateText="A person wearing glass having number on the glasses" runat="server" />
+            <img id="logo" alt="Murach Logo" src="Images/MurachLogo.jpg" />
             <h1>401K Future Value Calculator</h1>
-
 
             <table class="auto-style1">
                 <tr>
