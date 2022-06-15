@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ch03FutureValueBootstrap {
+namespace Task_3 {
     
     
     public partial class Default {
