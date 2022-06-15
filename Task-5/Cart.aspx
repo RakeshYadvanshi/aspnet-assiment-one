@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Your Shopping Cart" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Ch09Cart.Cart" %>
+﻿<%@ Page Title="Your Shopping Cart" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Task_5.Cart" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceholder" runat="server">
@@ -27,8 +27,6 @@
                 <div class="col-sm-12">
                     <asp:Button ID="btnContinue" runat="server"
                         PostBackUrl="~/Order.aspx" Text="Continue Shopping" CssClass="btn" />
-                    <asp:Button ID="btnCheckOut" runat="server" Text="Check Out"  
-                        onclick="btnCheckOut_Click" CssClass="btn" />
                 </div>
             </div>
         </div>

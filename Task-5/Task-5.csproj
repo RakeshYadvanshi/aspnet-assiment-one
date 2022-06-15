@@ -80,7 +80,6 @@
     <Content Include="Content\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\banner.jpg" />
     <Content Include="Images\Products\arm1.jpg" />
     <Content Include="Images\Products\blacklight1.jpg" />
     <Content Include="Images\Products\cat1.jpg" />
@@ -100,6 +99,7 @@
     <Content Include="Images\Products\rat2.jpg" />
     <Content Include="Images\Products\skel1.jpg" />
     <Content Include="Images\Products\skullfog1.jpg" />
+    <Content Include="Images\store-g65512a56c_1280.jpg" />
     <Content Include="Images\Products\strobe1.jpg" />
     <Content Include="Images\Products\superman1.jpg" />
     <Content Include="Images\Products\tlm1.jpg" />

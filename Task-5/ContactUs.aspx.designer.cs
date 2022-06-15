@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ch09Cart {
+namespace Task_5 {
     
     
     public partial class ContactUs {
@@ -54,9 +54,9 @@ namespace Ch09Cart {
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new Ch09Cart.Site Master {
+        public new Task_5.Site Master {
             get {
-                return ((Ch09Cart.Site)(base.Master));
+                return ((Task_5.Site)(base.Master));
             }
         }
     }

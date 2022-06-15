@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ch09Cart.Site" ClientIDMode="Static" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Task_5.Site" ClientIDMode="Static" %>
 
 <!DOCTYPE html>
 
@@ -13,37 +13,39 @@
     <asp:ContentPlaceHolder ID="headPlaceholder" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
-<div class="container">
-    <form id="form1" runat="server" class="form-horizontal">
+    <div class="container">
+        <form id="form1" runat="server" class="form-horizontal">
 
-        <header class="jumbotron"><%-- image set in site.css --%></header>
-        <div class="row">
-            <aside class="col-sm-2">
-                <nav>
-                    <asp:BulletedList ID="blNav" runat="server" DisplayMode="HyperLink" 
-                        CssClass="nav nav-pills nav-stacked">
-                        <asp:ListItem Value="~/Order.aspx">Home</asp:ListItem>
-                        <asp:ListItem Value="~/Cart.aspx">Cart</asp:ListItem>
-                        <asp:ListItem Value="~/Products.aspx">Products</asp:ListItem>
-                        <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
-                    </asp:BulletedList>
+            <header class="jumbotron"></header>
+            <div class="row">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <asp:BulletedList ID="blNav" runat="server" DisplayMode="HyperLink"
+                            CssClass="nav navbar-nav" >
+                            <asp:ListItem  Value="~/Order.aspx">Home</asp:ListItem>
+                            <asp:ListItem Value="~/Cart.aspx">Cart</asp:ListItem>
+                            <asp:ListItem Value="~/Products.aspx">Products</asp:ListItem>
+                            <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
+                        </asp:BulletedList>
+                    </div>
                 </nav>
-            </aside>
-            <main class="col-sm-9">
-                <h1><asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
-                <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+                
+                <main class="col-sm-9">
+                    <h1>
+                        <asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
+                    <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </main>
+            </div>
+
+            <footer class="text-center text-info">
+                <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
-            </main>
-        </div>
+            </footer>
 
-        <footer class="text-center text-info">
-            <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
-                <%-- default content - can be overridden by content pages --%>
-                <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label>
-            </asp:ContentPlaceHolder>
-        </footer>
-
-    </form>
-</div>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Ch09Cart.Order" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Task_5.Order" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceholder" runat="server">

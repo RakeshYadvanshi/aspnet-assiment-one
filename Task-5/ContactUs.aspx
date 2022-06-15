@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="Ch09Cart.ContactUs" %>
+﻿<%@ Page Title="Contact Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="Task_5.ContactUs" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceholder" runat="server">

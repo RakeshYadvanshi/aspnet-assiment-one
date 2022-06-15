@@ -6,9 +6,10 @@
 }
 
 .jumbotron {
-    background: url("../Images/banner.jpg");
+    background: url("../Images/store-g65512a56c_1280.jpg");
     background-size: 100% 100%;
     margin-top: 1em;
+    height:450px
 }
 
 .nav > li > a {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Ch09Cart
+namespace Task_5
 {
     public partial class Cart : System.Web.UI.Page
     {
@@ -56,9 +56,5 @@ namespace Ch09Cart
             }
         }
 
-        protected void btnCheckOut_Click(object sender, EventArgs e)
-        {
-            lblMessage.Text = "Sorry, that function hasn't been implemented yet.";
-        }
     }
 }

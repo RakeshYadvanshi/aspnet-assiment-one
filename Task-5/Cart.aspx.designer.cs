@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ch09Cart {
-    
-    
-    public partial class Cart {
-        
+namespace Task_5
+{
+
+
+    public partial class Cart
+    {
+
         /// <summary>
         /// lstCart control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lstCart;
-        
+
         /// <summary>
         /// btnRemove control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRemove;
-        
+
         /// <summary>
         /// btnEmpty control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEmpty;
-        
+
         /// <summary>
         /// lblMessage control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
-        
+
         /// <summary>
         /// btnContinue control.
         /// </summary>
@@ -56,25 +58,18 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnContinue;
-        
-        /// <summary>
-        /// btnCheckOut control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheckOut;
-        
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new Ch09Cart.Site Master {
-            get {
-                return ((Ch09Cart.Site)(base.Master));
+        public new Task_5.Site Master
+        {
+            get
+            {
+                return ((Task_5.Site)(base.Master));
             }
         }
     }

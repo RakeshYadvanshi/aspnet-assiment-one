@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ch09Cart {
-    
-    
-    public partial class Site {
-        
+namespace Task_5
+{
+
+
+    public partial class Site
+    {
+
         /// <summary>
         /// headPlaceholder control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder headPlaceholder;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// blNav control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.BulletedList blNav;
-        
+
         /// <summary>
         /// lblPageHeader control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPageHeader;
-        
+
         /// <summary>
         /// mainPlaceholder control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder mainPlaceholder;
-        
+
         /// <summary>
         /// footerPlaceHolder control.
         /// </summary>
@@ -65,14 +67,5 @@ namespace Ch09Cart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder footerPlaceHolder;
-        
-        /// <summary>
-        /// lblDaysUntilHalloween control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDaysUntilHalloween;
     }
 }
