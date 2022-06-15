@@ -1,14 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Task_6.Cart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Ch07Cart.Cart" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Chapter 6: Shopping Cart</title>
+    <title>Ch07: Shopping Cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header class="jumbotron"><%-- image set in site.css --%></header>
     <main>
         <form id="form1" runat="server" class="form-horizontal">
-       
+    
             <div class="row"><%-- row 1 --%>
                 <div class="col-sm-12"><h1>Your shopping cart</h1></div>
                 <div class="col-sm-6"><%-- cart display column --%>

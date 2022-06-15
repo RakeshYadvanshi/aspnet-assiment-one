@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Task_6
+namespace Ch07Cart
 {
     public partial class Cart : System.Web.UI.Page
     {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Task_6
+namespace Ch07Cart
 {
     public partial class Confirmation : System.Web.UI.Page
     {
@@ -19,17 +19,17 @@ namespace Task_6
                 "    First name: " + customer.FirstName + "\n" +
                 "    Last name: " + customer.LastName + "\n" +
                 "    Phone number: " + customer.Phone + "\n" +
+                 "   Date Of Birth: " + customer.BirthDate + "\n" +
                 "Billing address\n" +
                 "    Address: " + customer.Address + "\n" +
                 "    City: " + customer.City + "\n" +
                 "    State: " + customer.State + "\n" +
                 "    Zip code: " + customer.Zip + "\n" +
-                "Let me know about\n" +
-                "    New products: " + customer.NewProductsInfo + "\n" +
-                "    Special offers: " + customer.SpecialPromosInfo + "\n" +
-                "    New editions: " + customer.NewRevisionsInfo + "\n" +
-                "    Local events: " + customer.LocalEventsInfo + "\n" +
-                "Contact me via: " + customer.ContactVia + "\n";
+                "Shipping address\n" +
+                "    Address: " + customer.ShippingAddress + "\n" +
+                "    City: " + customer.ShippingCity + "\n" +
+                "    State: " + customer.ShippingState + "\n" +
+                "    Zip code: " + customer.ShippingZip + "\n";
 
             txtData.Text = message;
         }

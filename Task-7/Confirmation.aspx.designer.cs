@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Task_6 {
+namespace Ch07Cart {
     
     
     public partial class Confirmation {

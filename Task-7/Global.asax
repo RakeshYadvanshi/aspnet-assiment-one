@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Task_6.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Ch07Cart.Global" Language="C#" %>

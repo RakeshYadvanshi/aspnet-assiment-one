@@ -6,9 +6,15 @@
 }
 
 .jumbotron {
-    background: url("../Images/banner.jpg");
+    background: url("../Images/store-g65512a56c_1280.jpg");
     background-size: 100% 100%;
     margin-top: 1em;
+    height:450px
+}
+
+.nav > li > a {
+    color: #8c8c8c;
+    font-weight: 600;
 }
 
 .btn { 
@@ -19,16 +25,20 @@ label {
     font-weight: normal;
 }
 
+/*** Elements ***/
+footer {
+    padding-bottom: 1em;
+}
+
 /*** server controls ***/
+#lblDaysUntilHalloween {
+    color: #8c8c8c;
+    font-weight: 600;
+}
 #lblUnitPrice {
     font-weight: bold;
 }
 
 #lstCart { 
     min-height: 8em;
-}
-
-/*** adjust for CheckBoxList and RadioButtonList controls ***/
-input[type=checkbox], input[type=radio] {
-    margin: 0 1em 0 2em;
 }

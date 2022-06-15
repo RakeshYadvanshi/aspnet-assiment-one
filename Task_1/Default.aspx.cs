@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Ex02FutureValue
+namespace Task_1
 {
     public partial class Default : System.Web.UI.Page
     {

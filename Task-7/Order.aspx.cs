@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 // make sure to include this namespace
 using System.Data;
 
-namespace Task_6
+namespace Ch07Cart
 {
     public partial class Order : System.Web.UI.Page
     {
@@ -32,7 +32,7 @@ namespace Task_6
                 SqlDataSource1.Select(DataSourceSelectArguments.Empty);
             productsTable.RowFilter =
                 "ProductID = '" + ddlProducts.SelectedValue + "'";
-            DataRowView row = (DataRowView)productsTable[0];
+			DataRowView row = productsTable[0];
 
             //create a new product object and load with data from row
             Product p = new Product();

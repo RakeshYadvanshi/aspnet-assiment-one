@@ -13,11 +13,9 @@ public class Customer
     public string City { get; set; }
     public string State { get; set; }
     public string Zip { get; set; }
-    // values for "Please let me know about"
-    public bool NewProductsInfo { get; set; }
-    public bool NewRevisionsInfo { get; set; }
-    public bool SpecialPromosInfo { get; set; }
-    public bool LocalEventsInfo { get; set; }
-    // values for "Please contact me via"
-    public string ContactVia { get; set; }
+    public string ShippingAddress { get; set; }
+    public string ShippingCity { get; set; }
+    public string ShippingState { get; set; }
+    public string ShippingZip { get; set; }
+    public string BirthDate { get; set; }
 }

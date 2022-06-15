@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ch03FutureValue {
+namespace Task_2 {
     
     
     public partial class Default {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Task_6
+namespace Ch07Cart
 {
     public partial class CheckOut : System.Web.UI.Page
     {
@@ -15,10 +15,19 @@ namespace Task_6
             if (!IsPostBack)
             {
                 customer = (Customer)Session["Customer"];
-                this.LoadCustomerData();
+                LoadCustomerData();
             }
         }
-  
+        protected void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                GetCustomerData();
+                Response.Redirect("~/Confirmation.aspx");
+            }
+        }
+
+
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Session.Remove("Cart");
@@ -37,11 +46,11 @@ namespace Task_6
                 txtCity.Text = customer.City;
                 txtZip.Text = customer.Zip;
                 ddlState.SelectedValue = customer.State;
-                rblContactVia.SelectedValue = customer.ContactVia;
-                cblAboutList.Items[0].Selected = customer.NewProductsInfo;
-                cblAboutList.Items[1].Selected = customer.SpecialPromosInfo;
-                cblAboutList.Items[2].Selected = customer.NewRevisionsInfo;
-                cblAboutList.Items[3].Selected = customer.LocalEventsInfo;
+                txtShipAddress.Text = customer.ShippingAddress;
+                txtShipCity.Text = customer.ShippingCity;
+                ddlShipState.SelectedValue = customer.ShippingState;
+                txtShipZip.Text = customer.ShippingZip;
+                txtDateofBirth.Text = customer.BirthDate;
             }
         }
         private void GetCustomerData()
@@ -53,25 +62,49 @@ namespace Task_6
             customer.Phone = txtPhone.Text;
             customer.Address = txtAddress.Text;
             customer.City = txtCity.Text;
-            customer.Zip = txtZip.Text;
             customer.State = ddlState.SelectedValue;
-            customer.ContactVia = rblContactVia.SelectedValue;
-            customer.NewProductsInfo = cblAboutList.Items[0].Selected;
-            customer.SpecialPromosInfo = cblAboutList.Items[1].Selected;
-            customer.NewRevisionsInfo = cblAboutList.Items[2].Selected;
-            customer.LocalEventsInfo = cblAboutList.Items[3].Selected;
-            
+            customer.Zip = txtZip.Text;
+            customer.BirthDate = txtDateofBirth.Text;
+
+            if (chkSameAsBilling.Checked)
+            {
+                customer.ShippingAddress = customer.Address;
+                customer.ShippingCity = customer.City;
+                customer.ShippingState = customer.State;
+                customer.ShippingZip = customer.Zip;
+            }
+            else
+            {
+                customer.ShippingAddress = txtShipAddress.Text;
+                customer.ShippingCity = txtShipCity.Text;
+                customer.ShippingState = ddlShipState.SelectedValue;
+                customer.ShippingZip = txtShipZip.Text;
+            }
             Session["Customer"] = customer;
+        }
+
+        protected void chkSameAsBilling_CheckedChanged(object sender, EventArgs e)
+        {
+            rfvShipAddress.Enabled = !rfvShipAddress.Enabled;
+            rfvShipCity.Enabled = !rfvShipCity.Enabled;
+            rfvShipState.Enabled = !rfvShipState.Enabled;
+            rfvShipZip.Enabled = !rfvShipZip.Enabled;
+
+            txtShipAddress.Enabled = !txtShipAddress.Enabled;
+            txtShipCity.Enabled = !txtShipCity.Enabled;
+            ddlShipState.Enabled = !ddlShipState.Enabled;
+            txtShipZip.Enabled = !txtShipZip.Enabled;
         }
 
         protected void SaveData(object sender, CommandEventArgs e)
         {
-            if (IsValid)
-            {
-                GetCustomerData();
-                if (e.CommandName == "Continue")
-                    Response.Redirect("~/Confirmation.aspx");
-            }
+
+            GetCustomerData();
+            if (e.CommandName == "Confirm")
+                Response.Redirect("~/Confirmation.aspx");
+            else if (e.CommandName == "Continue")
+                Response.Redirect("~/Order.aspx");
+
 
         }
     }

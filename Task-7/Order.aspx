@@ -1,13 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Task_6.Order" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Ch07Cart.Order" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ch06: Shopping Cart</title>
+    <title>Ch07: Shopping Cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 </head>
 <body>
@@ -15,7 +16,7 @@
     <header class="jumbotron"><%-- image set in site.css --%></header>
     <main>
         <form id="form1" runat="server" class="form-horizontal">
- 
+    
             <div class="row"><%-- row 1 --%>
                 <div class="col-sm-8"><%-- product drop down and info column --%>
                     <div class="form-group">
@@ -51,10 +52,10 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label class="col-sm-1">Quantity:</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <asp:TextBox ID="txtQuantity" runat="server" 
                                 CssClass="form-control"></asp:TextBox></div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-8">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger"
                                 runat="server" ControlToValidate="txtQuantity" Display="Dynamic" 
                                 ErrorMessage="Quantity is a required field."></asp:RequiredFieldValidator>
