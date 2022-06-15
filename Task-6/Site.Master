@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Task_6.Site" ClientIDMode="Static" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ch09: Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="headPlaceholder" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+        <form id="form1" runat="server" class="form-horizontal">
+
+            <header class="jumbotron"></header>
+            <div class="row">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <asp:BulletedList ID="blNav" runat="server" DisplayMode="HyperLink"
+                            CssClass="nav navbar-nav" >
+                            <asp:ListItem  Value="~/Order.aspx">Home</asp:ListItem>
+                            <asp:ListItem Value="~/Cart.aspx">Cart</asp:ListItem>
+                            <asp:ListItem Value="~/Products.aspx">Products</asp:ListItem>
+                            <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
+                        </asp:BulletedList>
+                    </div>
+                </nav>
+                
+                <main class="col-sm-9">
+                    <h1>
+                        <asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
+                    <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </main>
+            </div>
+
+            <footer class="text-center text-info">
+                <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </footer>
+
+        </form>
+    </div>
+</body>
+</html>
