@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Chapter 2: Future Value</title>
+    <title></title>
 
     <style type="text/css">
         .auto-style1 {
@@ -21,7 +21,7 @@
     <form id="form1" runat="server">
         <div>
             <img id="logo" alt="Murach Logo" src="Images/MurachLogo.jpg" />
-            <h1>401K Future Value Calculator</h1>
+            <h1>Future Value </h1>
 
             <table class="auto-style1">
                 <tr>

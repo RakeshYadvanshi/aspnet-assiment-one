@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Chapter 3: Future Value with Bootstrap</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
 <div class="container">
     <header class="jumbotron">
         <img id="logo" alt="Murach logo" src="Images/MurachLogo.jpg" class="img-rounded img-responsive"/>
-        <h1>401K Future Value Calculator</h1>
+        <h1>Future Value</h1>
     </header> 
     <main> 
         <form id="form1" runat="server" class="form-horizontal" role="form">
@@ -68,9 +68,9 @@
             <div class="form-group">
                 <div class="col-xs-offset-3 col-xs-9">
                     <asp:Button ID="btnCalculate" runat="server" Text="Calculate" 
-                        onclick="btnCalculate_Click" CssClass="btn btn-primary" />
+                        onclick="btnCalculate_Click" CssClass="btn btn-success" />
                     <asp:Button ID="btnClear" runat="server" Text="Clear" 
-                        onclick="btnClear_Click" CssClass="btn btn-primary" CausesValidation="False" />
+                        onclick="btnClear_Click" CssClass="btn" CausesValidation="False" />
                 </div>
             </div>      
         </form>

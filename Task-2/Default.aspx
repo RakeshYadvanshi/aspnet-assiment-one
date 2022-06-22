@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Chapter 3: Future Value</title>
+    <title></title>
     <link href="site.css" rel="stylesheet" />
 </head>
 <body>
@@ -11,7 +11,7 @@
         <img id="logo" alt="Murach Logo" src="Images/MurachLogo.jpg" />
     </header>
     <main>
-        <h1>401K Future Value Calculator</h1>
+        <h1>Future Value</h1>
         <form id="form1" runat="server">
             <label for="ddlMonthlyInvestment">Monthly Investment:</label>
             <asp:DropDownList ID="ddlMonthlyInvestment" runat="server" 
