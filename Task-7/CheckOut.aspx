@@ -1,19 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckOut.aspx.cs" Inherits="Ch07Cart.CheckOut" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+   MasterPageFile="~/Site.Master" CodeBehind="CheckOut.aspx.cs" Inherits="Ch07Cart.CheckOut" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Ch07: Shopping Cart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/site.css" rel="stylesheet" />
-    <script src="Scripts/jquery-2.2.3.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-</head>
-<body>
+<asp:Content ID="Content1" ContentPlaceHolderID="headPlaceholder" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainPlaceholder" runat="server">
 <div class="container">
-    <header class="jumbotron"><%-- image set in site.css --%></header>
     <main>
         <form id="form1" runat="server" class="form-horizontal" 
             defaultfocus="txtEmail1" defaultbutton="btnCheckOut">
@@ -255,5 +246,7 @@
     </main>
 
 </div>
-</body>
-</html>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="footerPlaceHolder" runat="server">
+</asp:Content>
+

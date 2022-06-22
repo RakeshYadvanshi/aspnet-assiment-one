@@ -6,46 +6,126 @@
 <head runat="server">
     <title>Ch09: Shopping Cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <link href="Content/Site.css" rel="stylesheet" />
+      <!-- Bootstrap CSS -->
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/site.css" rel="stylesheet" />
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <asp:ContentPlaceHolder ID="headPlaceholder" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="container">
-        <form id="form1" runat="server" class="form-horizontal">
+    <header class="header-area overlay">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">Student Wardrobe</a>
 
-            <header class="jumbotron"></header>
-            <div class="row">
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a href="Default.aspx" class="nav-item nav-link active">Home</a></li>
+                        <li><a href="Order.aspx" class="nav-item nav-link">Products</a></li>
+                        <li><a href="Cart.aspx" class="nav-item nav-link">Cart</a></li>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <asp:BulletedList ID="blNav" runat="server" DisplayMode="HyperLink"
-                            CssClass="nav navbar-nav" >
-                            <asp:ListItem  Value="~/Order.aspx">Home</asp:ListItem>
-                            <asp:ListItem Value="~/Cart.aspx">Cart</asp:ListItem>
-                            <asp:ListItem Value="~/Products.aspx">Products</asp:ListItem>
-                            <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
-                        </asp:BulletedList>
-                    </div>
-                </nav>
-                
-                <main class="col-sm-9">
-                    <h1>
-                        <asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
-                    <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
-                    </asp:ContentPlaceHolder>
-                </main>
+                        <li class="dropdown">
+                            <a href="#" class="nav-item nav-link"
+                                data-toggle="dropdown">Portfolio</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Dropdown Item 1</a>
+                                <a href="#" class="dropdown-item">Dropdown Item 2</a>
+                                <a href="#" class="dropdown-item">Dropdown Item 3</a>
+                                <a href="#" class="dropdown-item">Dropdown Item 4</a>
+                                <a href="#" class="dropdown-item">Dropdown Item 5</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="nav-item nav-link">Contact</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
 
-            <footer class="text-center text-info">
-                <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
-                </asp:ContentPlaceHolder>
-            </footer>
+        <div class="banner">
+            <div class="container">
+                <h1>Quality and Lowest Prices</h1>
+                <p>The pain itself is love, the main storage system. Integer nec elit ex. Even the element of the bed and the time of the employee..</p>
+                <a href="#content" class="button button-primary">Learn More</a>
+            </div>
+        </div>
+    </header>
 
-        </form>
-    </div>
+    <main>
+
+        <h1>
+            <asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
+        <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+        </asp:ContentPlaceHolder>
+        <section id="content" class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>The pain itself is love, the main storage system. Integer nec elit ex. Even the element of the bed and the time of the employee. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. There was also no borders, now even the arrows, the valley of the eros. Even when the time is made to feel good, the life of the customers is very sad. Maybe it was the weekend. Cras ullamcorper ex et viverra vulputate. For the bed is unconventional, nor is the price of laughter, it's just a sort of place to start. Therefore, no poisonous man, no arrows from the gate. </p>
+                    </div>
+                    <div class="col-md-4">
+                      <p>The pain itself is love, the main storage system. Integer nec elit ex. Even the element of the bed and the time of the employee. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. There was also no borders, now even the arrows, the valley of the eros. Even when the time is made to feel good, the life of the customers is very sad. Maybe it was the weekend. Cras ullamcorper ex et viverra vulputate. For the bed is unconventional, nor is the price of laughter, it's just a sort of place to start. Therefore, no poisonous man, no arrows from the gate. </p>
+                    </div>
+                    <div class="col-md-4">
+                     <p>The pain itself is love, the main storage system. Integer nec elit ex. Even the element of the bed and the time of the employee. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. There was also no borders, now even the arrows, the valley of the eros. Even when the time is made to feel good, the life of the customers is very sad. Maybe it was the weekend. Cras ullamcorper ex et viverra vulputate. For the bed is unconventional, nor is the price of laughter, it's just a sort of place to start. Therefore, no poisonous man, no arrows from the gate. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center text-info">
+        <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </footer>
+
+
+
+
+
+
+    <script>
+        jQuery(function ($) {
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() >= 200) {
+                    $('.navbar').addClass('fixed-top');
+                } else if ($(this).scrollTop() == 0) {
+                    $('.navbar').removeClass('fixed-top');
+                }
+            });
+
+            function adjustNav() {
+                var winWidth = $(window).width(),
+                    dropdown = $('.dropdown'),
+                    dropdownMenu = $('.dropdown-menu');
+
+                if (winWidth >= 768) {
+                    dropdown.on('mouseenter', function () {
+                        $(this).addClass('show')
+                            .children(dropdownMenu).addClass('show');
+                    });
+
+                    dropdown.on('mouseleave', function () {
+                        $(this).removeClass('show')
+                            .children(dropdownMenu).removeClass('show');
+                    });
+                } else {
+                    dropdown.off('mouseenter mouseleave');
+                }
+            }
+
+            $(window).on('resize', adjustNav);
+
+            adjustNav();
+        });
+    </script>
 </body>
 </html>
