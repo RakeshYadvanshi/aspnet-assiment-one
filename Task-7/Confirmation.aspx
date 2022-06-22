@@ -3,7 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainPlaceholder" runat="server">
 <div class="container">
-    <header class="jumbotron"><%-- image set in site.css --%></header>
     <main>
         <form id="form1" runat="server">
     
@@ -23,4 +22,3 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footerPlaceHolder" runat="server">
 </asp:Content>
-<!DOCTYPE html>
